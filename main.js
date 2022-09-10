@@ -9,12 +9,14 @@ var app = new Vue({
 			this.inputs += number;
 		},
 		addOperator: function(operator) {
-			if (this.inputs[this.inputs.length -1] != '+' && this.inputs[this.inputs.length -1] != '-' && this.inputs[this.inputs.length -1] != '/' && this.inputs[this.inputs.length -1] != '*') {
+			let operators = ['+', '-', '/', '*'];
+			if (operator.includes(operator)) {
 				this.inputs += operator;
 			}
 		},
 		clear: function() {
 			this.inputs = '';
+			this.output = 0;
 		},
 		result: function() {
 			this.output = eval(this.inputs);
