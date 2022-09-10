@@ -14,24 +14,27 @@
 					<input id="calculator_output" type="text" class="calculator__inputs-output" v-model="output" readonly />
 				</div>
 				<div class="calculator__pad">
-					<span class="calculator__pad-button">7</span>
-					<span class="calculator__pad-button">8</span>
-					<span class="calculator__pad-button">9</span>
-					<span class="calculator__pad-button">/</span>
-					<span class="calculator__pad-button">4</span>
-					<span class="calculator__pad-button">5</span>
-					<span class="calculator__pad-button">6</span>
-					<span class="calculator__pad-button">*</span>
-					<span class="calculator__pad-button">1</span>
-					<span class="calculator__pad-button">2</span>
-					<span class="calculator__pad-button">3</span>
-					<span class="calculator__pad-button">+</span>
-					<span class="calculator__pad-button" >C</span>
-					<span class="calculator__pad-button">0</span>
-					<span class="calculator__pad-button" >=</span>
-					<span class="calculator__pad-button">-</span>
+					<span class="calculator__pad-button" @click="addNumber(7)">7</span>
+					<span class="calculator__pad-button" @click="addNumber(8)">8</span>
+					<span class="calculator__pad-button" @click="addNumber(9)">9</span>
+					<span class="calculator__pad-button" @click="addOperator('/')">/</span>
+					<span class="calculator__pad-button" @click="addNumber(4)">4</span>
+					<span class="calculator__pad-button" @click="addNumber(5)">5</span>
+					<span class="calculator__pad-button" @click="addNumber(6)">6</span>
+					<span class="calculator__pad-button" @click="addOperator('*')">*</span>
+					<span class="calculator__pad-button" @click="addNumber(1)">1</span>
+					<span class="calculator__pad-button" @click="addNumber(2)">2</span>
+					<span class="calculator__pad-button" @click="addNumber(3)">3</span>
+					<span class="calculator__pad-button" @click="addOperator('+')">+</span>
+					<span class="calculator__pad-button" @click="clear()">C</span>
+					<span class="calculator__pad-button" @click="addNumber(0)">0</span>
+					<span class="calculator__pad-button" @click="result()">=</span>
+					<span class="calculator__pad-button" @click="addOperator('-')">-</span>
 				</div>
 			</div>
 		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
